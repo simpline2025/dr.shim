@@ -324,17 +324,23 @@ body {
 
   /* 헤더 */
   .header {
-    padding: 18px 0;
-    gap: 8px;
+    gap: 16px !important;   /* 기존보다 간격을 더 띄움 */
+    padding-top: 26px !important;
+    padding-bottom: 20px !important;
   }
 
   .logo {
-    font-size: 1rem;
-    padding: 5px 14px;
+    text-align: center !important;
+    width: 100%;
+    display: block;
+    font-size: 1.15rem;
   }
 
   .nav {
-    gap: 14px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 22px;
   }
 
   .nav a {
@@ -370,10 +376,25 @@ body {
 
   .btn {
     width: 100%;
-    max-width: 260px;
+    max-width: 280px;      /* 두 버튼 동일 폭 */
     text-align: center;
-    padding: 12px 0;
+    padding: 14px 0;
+    border-radius: 100px;
   }
+
+    /* 문의하기 버튼 스타일 통일 */
+  .btn.outline {
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .btn.outline:hover {
+    border-color: var(--accent-purple);
+    color: var(--accent-purple);
+    background: rgba(255, 255, 255, 0.10);
+  }
+
 
   /* 섹션 */
   .section {
