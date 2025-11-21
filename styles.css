@@ -50,13 +50,13 @@ body {
 --------------------------------*/
 .header {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 22px 26px;
   display: flex;
-  justify-content: center;   /* ⬅ 중앙 정렬 핵심 */
-  align-items: center;
-  gap: 40px;                 /* 로고와 메뉴 간격 */
+  flex-direction: column;   /* 세로 배치 */
+  justify-content: center;
+  align-items: center;      /* ⬅ 중앙 정렬 핵심 */
+  gap: 12px;
+
   backdrop-filter: blur(16px);
   background: rgba(8, 8, 25, 0.4);
   position: sticky;
@@ -74,6 +74,14 @@ body {
   padding: 6px 14px;
   border-radius: 100px;
 }
+
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
 
 .nav a {
   margin-left: 20px;
@@ -154,13 +162,18 @@ body {
 }
 
 .btn.outline {
-  border-color: var(--accent-soft);
-  color: var(--text-soft);
+  border: 1px solid var(--accent-blue);   /* 외곽선을 하늘색으로 */
+  color: var(--accent-blue);              /* 글자색 하늘색 */
+  background: rgba(255, 255, 255, 0.05);  /* 은은한 배경 */
+  padding: 12px 26px;
+  border-radius: 100px;
+  transition: 0.25s;
 }
 
 .btn.outline:hover {
-  color: var(--text-white);
-  border-color: var(--accent-blue);
+  border-color: var(--accent-purple);     /* hover 시 보라빛 그라디언트 느낌 */
+  color: var(--accent-purple);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 /* Hero 프로필 이미지 */
